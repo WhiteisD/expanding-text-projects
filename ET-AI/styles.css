@@ -1,0 +1,51 @@
+/* ===== dew styles.css for AI terms learning page ====== */
+
+/* ===== Item / Detail ===== */
+
+
+#item {
+  font-size: 24px;
+}
+
+#detail {
+  font-size: 20px;
+  background: #FFFF00;
+}
+
+/*
+#item {
+  color: #FFFFFF;
+  background: #325671;
+  clear: both;
+  float: right;
+  width: 577px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+*/
+
+/* ===== Global ===== */
+
+BODY {
+  background-color: White;
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  font-size: 11px;
+}
+
+.subheader {
+  color: #333366;
+}
+
+TD {
+  color: #000000;
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  font-size: 13px;
+}
+
+.short { display: inline; }
+.long  { display: none; background-color: yellow; }
+
+.main-term {
+  font-size: 34px;
+  font-weight: bold;
+}

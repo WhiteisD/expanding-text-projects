@@ -1,0 +1,310 @@
+<HTML>
+<HEAD>
+  <title>ET-AI.HTM</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+
+
+<!-- ************************************************************************ -->
+<!-- ****                                                                **** -->
+<!-- ****                                                                **** -->
+<!-- ConTEXT system Expanding Text javascript header begins here -->
+<!-- ConTEXT header version 1.3 -->
+<!-- More info: http://www.ContextEditor.org -->
+
+<style type="text/css">
+<!--
+BODY,TD {color: Black; }
+ .short { display:inline; }
+ .long { display:none; background-color: yellow; }
+ .skip { display:inline; background-color: white; }
+-->
+</style>
+
+<SCRIPT LANGUAGE=javascript>
+<!--
+var isNav4, isNav6, isIE4;
+
+/*
+ * Browser version snooper; determines your browser
+ * (Navigator 4, Navigator 6, or Internet Explorer 4/5)
+ */
+
+function setBrowser() {
+    if (navigator.appVersion.charAt(0) == "4") {
+        if (navigator.appName.indexOf("Explorer") >= 0) {
+            isIE4 = true;
+        }
+        else {
+            isNav4 = true;
+        }
+    }
+    else if (navigator.appVersion.charAt(0) > "4") {
+        isNav6 = true;
+    }
+}
+
+function setIdProperty( id, property, value ) {
+    if (isNav6) {
+        var styleObject = document.getElementById( id );
+        if (styleObject != null) {
+            styleObject = styleObject.style;
+            styleObject[ property ] = value;
+        }
+    }
+    else if (isNav4) {
+        document[id][property] = value;
+    }
+    else if (isIE4) {
+         document.all[id].style[property] = value;
+    }
+}
+
+function swap( divNum, expanding ) {
+    if (expanding) {
+        setIdProperty(divNum + "_c", "display", "none");
+        setIdProperty(divNum + "_o", "display", "inline");
+    }
+    else {
+        setIdProperty(divNum + "_o", "display", "none");
+        setIdProperty(divNum + "_c", "display", "inline");
+    }
+}
+
+setBrowser()
+
+//-->
+</SCRIPT>
+<!-- ****                                                                **** -->
+<!-- ****                                                                **** -->
+<!-- ************************************************************************ -->
+
+
+</HEAD>
+
+
+<BODY leftmargin="0" topmargin="0" marginwidth="15" marginheight="0">
+
+<font face="arial">
+
+
+<table border="0" width="98%"     cellSpacing="0" cellPadding="0" >
+  <tr>
+  <td colspan="2">
+  <BR>
+<center><font size="6">AI Terms to Learn<b></b></font></center>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="40%" valign="top">
+      <font size="4">
+  <!-- (b1) ************************************************************** -->
+
+
+
+<div id="item">
+
+What changes on NUC (very briefly)<br>
+<br>
+<span class="main-term">Build</span>
+<span id="identifier_24799.74_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_24799.74', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_24799.74_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_24799.74',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The process of compiling source code into an executable or library, often tailored to hardware, OS, and performance options.)
+</span>
+
+/ <span class="main-term">runtime:</span>
+<span id="identifier_63857.61_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_63857.61', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_63857.61_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_63857.61',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The environment and phase where compiled AI software executes, loads models, manages memory, and performs inference.)
+</span>
+
+use a <b>llama.cpp</b>
+<span id="identifier_8249.572_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_8249.572', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_8249.572_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_8249.572',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A lightweight C/C++ inference engine for running LLaMA-family models efficiently on CPUs and GPUs, emphasizing local and offline use.)
+</span>
+
+build that enables <b>CUDA</b>
+<span id="identifier_34126.59_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_34126.59', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_34126.59_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_34126.59',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(NVIDIA’s parallel computing platform enabling GPU acceleration for AI workloads through specialized kernels and memory management.)
+</span>
+
+ (or <b>cuBLAS</b>
+<span id="identifier_48090.07_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_48090.07', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_48090.07_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_48090.07',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(NVIDIA’s GPU-accelerated linear algebra library, heavily used for fast matrix multiplications in neural network inference.)
+</span>
+
+ ) so
+ <b>inference</b>
+<span id="identifier_25163.06_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_25163.06', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_25163.06_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_25163.06',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The process of running a trained model to generate outputs, such as text or predictions, from new input data.)
+</span>
+
+ runs on the RTX GPU.<br>
+<br>
+
+<span class="main-term">Model</span>
+<span id="identifier_55803.61_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_55803.61', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_55803.61_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_55803.61',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A trained neural network containing learned parameters that encode patterns from data to perform tasks like language generation.)
+</span>
+
+ <span class="main-term">choice:</span> move up from <b>a 3B</b>
+<span id="identifier_22053.98_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_22053.98', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_22053.98_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_22053.98',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A language model with roughly three billion parameters, relatively lightweight and suitable for CPUs or small GPUs.)
+</span>
+
+CPU-friendly <b>model size</b>
+<span id="identifier_17536.11_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_17536.11', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_17536.11_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_17536.11',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The total number of parameters in a model, affecting memory usage, accuracy, and computational requirements.)
+</span>
+
+ to larger models (<b>7B</b>
+<span id="identifier_42143.09_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_42143.09', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_42143.09_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_42143.09',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A mid-sized model balancing quality and resource use, commonly used on consumer GPUs with modest VRAM.)
+</span>
+
+, <b>13B</b>
+<span id="identifier_53910.9_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_53910.9', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_53910.9_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_53910.9',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A larger, more capable model requiring substantial RAM or GPU VRAM, offering improved reasoning and coherence.)
+</span>
+
+, maybe more) because you have 64 GB RAM and <b>GPU VRAM</b>
+<span id="identifier_5588.794_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_5588.794', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_5588.794_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_5588.794',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(Dedicated high-speed memory on a GPU used to store model weights, activations, and intermediate tensors.)
+</span>
+
+.<br>
+ <br>
+
+<span class="main-term">Quantization:</span>
+<span id="identifier_58362.43_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_58362.43', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_58362.43_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_58362.43',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A technique that reduces numerical precision of model weights to lower memory usage and increase inference speed.)
+</span>
+
+switch from “CPU survival <b>quants</b>
+<span id="identifier_70370.63_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_70370.63', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_70370.63_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_70370.63',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(quant - Shorthand for a specific quantized version of a model, indicating reduced precision compared to full floating-point.)
+</span>
+
+” to <b>GPU-optimized quants</b>
+<span id="identifier_42103.5_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_42103.5', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_42103.5_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_42103.5',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A quantization format designed to run efficiently on GPUs, preserving throughput while minimizing VRAM usage.)
+</span>
+
+(often <b>GGUF</b>
+<span id="identifier_47382.98_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_47382.98', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_47382.98_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_47382.98',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A modern binary file format for llama.cpp models, supporting metadata, quantization variants, and fast loading.)
+</span>
+
+, either <b>5-bit</b>
+<span id="identifier_38862.58_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_38862.58', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_38862.58_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_38862.58',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A GGUF model quantized to five bits per weight, trading slight quality loss for significant memory savings.)
+</span>
+
+ or <b>6-bit</b>
+<span id="identifier_36219.73_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_36219.73', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_36219.73_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_36219.73',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A GGUF model using six-bit quantization, offering a balance between accuracy and reduced memory footprint.)
+</span>
+
+ , or even <b>FP16</b>
+<span id="identifier_47511.29_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_47511.29', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_47511.29_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_47511.29',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(Half-precision floating-point format commonly used on GPUs for fast, high-quality inference with moderate VRAM use.)
+</span>
+
+ if you go that route) for better quality at good speed.<br>
+ <br>
+
+
+
+<span class="main-term">Context length:</span>
+<span id="identifier_47297.18_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_47297.18', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_47297.18_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_47297.18',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The maximum number of tokens a model can process at once before older tokens are discarded.)
+</span>
+
+ raise <b>context</b>
+<span id="identifier_15707.15_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_15707.15', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_15707.15_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_15707.15',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The sequence of tokens the model can attend to when generating output, including prompt and prior responses.)
+</span>
+
+ from <b>2K</b>
+<span id="identifier_926.3386_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_926.3386', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_926.3386_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_926.3386',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A context window of roughly 2,000 tokens, sufficient for short conversations or documents.)
+</span>
+
+ to <b>8K or 16K</b>
+<span id="identifier_92674.3_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_92674.3', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_92674.3_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_92674.3',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(Extended context windows allowing much longer prompts, conversations, or documents at increased memory cost.)
+</span>
+
+ (as desired) because RAM allows it.<br>
+<br>
+
+
+<span class="main-term">GPU offload setting:</span>
+<span id="identifier_18960.39_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_18960.39', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_18960.39_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_18960.39',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(A setting change you can make in ...)
+</span>
+
+ set how many <b>layers</b>
+<span id="identifier_4258.521_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_4258.521', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_4258.521_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_4258.521',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The number of transformer layers assigned to GPU execution, directly controlling VRAM usage and performance.)
+</span>
+
+ to <b>offload to GPU</b>
+<span id="identifier_49651.96_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_49651.96', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_49651.96_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_49651.96',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The practice of running part of the model’s computation on the GPU instead of the CPU.)
+</span>
+
+ (in llama.cpp this is the <b>key lever</b>
+<span id="identifier_28356.97_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_28356.97', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_28356.97_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_28356.97',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(In llama.cpp, the primary performance knob: increase GPU layers until VRAM is full but not exceeded.)
+</span>
+
+) and <b>tune</b>
+<span id="identifier_91332.51_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_91332.51', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_91332.51_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_91332.51',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(Adjusting how much of the model runs on GPU to maximize speed without exceeding available VRAM.)
+</span>
+
+ it to fit VRAM.<br>
+<br>
+
+
+<span class="main-term">Threads
+<span id="identifier_73882.46_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_73882.46', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_73882.46_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_73882.46',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The number of parallel CPU execution threads used during inference, affecting speed and system load.)
+</span>
+
+ / batching:
+<span id="identifier_5548.99_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_5548.99', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_5548.99_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_5548.99',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(Processing multiple tokens or requests together to improve hardware utilization and throughput.)
+</span>
+
+</span> CPU threads matter less; you’ll tune <b>batch size</b>
+<span id="identifier_91355.05_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_91355.05', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_91355.05_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_91355.05',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(The number of tokens or sequences processed simultaneously during inference, impacting speed and memory use.)
+</span>
+
+ / <b>flash attention options</b>
+<span id="identifier_35271.54_c" class="short">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_35271.54', true)"    ><img alt="expand" src="plus.gif" border="0"></a>  </span><span id="identifier_35271.54_o" class="long">  <a href="javascript:return null;"    onmousedown="javascript:swap('identifier_35271.54',false)"    ><img  alt="retract" src="minus.gif" border="0"></a>  <span class="skip"></span>
+(Optimized attention algorithms that reduce memory bandwidth and latency, especially beneficial for long contexts.)
+</span>
+
+ (if enabled) for throughput.<br>
+<br>
+	
+
+<br>
+That’s basically it: <b>same architecture, different build + bigger model + more context + GPU offload tuning</b>.<br>
+<br>
+
+
+</div>
+
+
+
+  <!-- (b1) end ************************************************************** -->
+      </font>
+    </td>
+
+  </tr>
+</table>
+</font>
+</BODY>
+</HTML>

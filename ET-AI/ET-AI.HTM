@@ -1,0 +1,199 @@
+<HTML>
+<HEAD>
+  <title>ET-AI.HTM</title>
+	<link rel="stylesheet" href="styles.css" type="text/css">
+</HEAD>
+<BODY leftmargin="0" topmargin="0" marginwidth="15" marginheight="0">
+
+<font face="arial">
+
+
+<table border="0" width="98%"     cellSpacing="0" cellPadding="0" >
+  <tr>
+  <td colspan="2">
+  <BR>
+<center><font size="6">AI Terms to Learn<b></b></font></center>
+  </td>
+  </tr>
+  <tr>
+
+    <td width="40%" valign="top">
+      <font size="4">
+  <!-- (b1) ************************************************************** -->
+
+
+
+<div id="item">
+
+What changes on NUC (very briefly)<br>
+<br>
+<span class="main-term">Build</span>
+<EXPAND>
+(The process of compiling source code into an executable or library, often tailored to hardware, OS, and performance options.)
+</EXPAND>
+/ <span class="main-term">runtime:</span>
+<EXPAND>
+(The environment and phase where compiled AI software executes, loads models, manages memory, and performs inference.)
+</EXPAND>
+use a <b>llama.cpp</b>
+<EXPAND>
+(A lightweight C/C++ inference engine for running LLaMA-family models efficiently on CPUs and GPUs, emphasizing local and offline use.)
+</EXPAND>
+build that enables <b>CUDA</b>
+<EXPAND>
+(NVIDIA’s parallel computing platform enabling GPU acceleration for AI workloads through specialized kernels and memory management.)
+</EXPAND>
+ (or <b>cuBLAS</b>
+ <EXPAND>
+(NVIDIA’s GPU-accelerated linear algebra library, heavily used for fast matrix multiplications in neural network inference.)
+</EXPAND>
+ ) so
+ <b>inference</b>
+<EXPAND>
+(The process of running a trained model to generate outputs, such as text or predictions, from new input data.)
+</EXPAND>
+ runs on the RTX GPU.<br>
+<br>
+
+<span class="main-term">Model</span>
+<EXPAND>
+(A trained neural network containing learned parameters that encode patterns from data to perform tasks like language generation.)
+</EXPAND>
+ <span class="main-term">choice:</span> move up from <b>a 3B</b>
+<EXPAND>
+(A language model with roughly three billion parameters, relatively lightweight and suitable for CPUs or small GPUs.)
+</EXPAND>
+CPU-friendly <b>model size</b>
+<EXPAND>
+(The total number of parameters in a model, affecting memory usage, accuracy, and computational requirements.)
+ </EXPAND>
+ to larger models (<b>7B</b>
+<EXPAND>
+(A mid-sized model balancing quality and resource use, commonly used on consumer GPUs with modest VRAM.)
+</EXPAND>
+, <b>13B</b>
+<EXPAND>
+(A larger, more capable model requiring substantial RAM or GPU VRAM, offering improved reasoning and coherence.)
+</EXPAND>
+, maybe more) because you have 64 GB RAM and <b>GPU VRAM</b>
+<EXPAND>
+(Dedicated high-speed memory on a GPU used to store model weights, activations, and intermediate tensors.)
+</EXPAND>
+.<br>
+ <br>
+
+<span class="main-term">Quantization:</span>
+<EXPAND>
+(A technique that reduces numerical precision of model weights to lower memory usage and increase inference speed.)
+</EXPAND>
+switch from “CPU survival <b>quants</b>
+<EXPAND>
+(quant - Shorthand for a specific quantized version of a model, indicating reduced precision compared to full floating-point.)
+</EXPAND>
+” to <b>GPU-optimized quants</b>
+<EXPAND>
+(A quantization format designed to run efficiently on GPUs, preserving throughput while minimizing VRAM usage.)
+</EXPAND>
+(often <b>GGUF</b>
+<EXPAND>
+(A modern binary file format for llama.cpp models, supporting metadata, quantization variants, and fast loading.)
+</EXPAND>
+, either <b>5-bit</b>
+<EXPAND>
+(A GGUF model quantized to five bits per weight, trading slight quality loss for significant memory savings.)
+</EXPAND>
+ or <b>6-bit</b>
+<EXPAND>
+(A GGUF model using six-bit quantization, offering a balance between accuracy and reduced memory footprint.)
+</EXPAND>
+ , or even <b>FP16</b>
+<EXPAND>
+(Half-precision floating-point format commonly used on GPUs for fast, high-quality inference with moderate VRAM use.)
+</EXPAND>
+ if you go that route) for better quality at good speed.<br>
+ <br>
+
+
+
+<span class="main-term">Context length:</span>
+<EXPAND>
+(The maximum number of tokens a model can process at once before older tokens are discarded.)
+</EXPAND>
+ raise <b>context</b>
+<EXPAND>
+(The sequence of tokens the model can attend to when generating output, including prompt and prior responses.)
+</EXPAND>
+ from <b>2K</b>
+<EXPAND>
+(A context window of roughly 2,000 tokens, sufficient for short conversations or documents.)
+</EXPAND>
+ to <b>8K or 16K</b>
+<EXPAND>
+(Extended context windows allowing much longer prompts, conversations, or documents at increased memory cost.)
+</EXPAND>
+ (as desired) because RAM allows it.<br>
+<br>
+
+
+<span class="main-term">GPU offload setting:</span>
+<EXPAND>
+(A setting change you can make in ...)
+</EXPAND>
+ set how many <b>layers</b>
+<EXPAND>
+(The number of transformer layers assigned to GPU execution, directly controlling VRAM usage and performance.)
+</EXPAND>
+ to <b>offload to GPU</b>
+<EXPAND>
+(The practice of running part of the model’s computation on the GPU instead of the CPU.)
+</EXPAND>
+ (in llama.cpp this is the <b>key lever</b>
+ <EXPAND>
+(In llama.cpp, the primary performance knob: increase GPU layers until VRAM is full but not exceeded.)
+</EXPAND>
+) and <b>tune</b>
+<EXPAND>
+(Adjusting how much of the model runs on GPU to maximize speed without exceeding available VRAM.)
+</EXPAND>
+ it to fit VRAM.<br>
+<br>
+
+
+<span class="main-term">Threads
+<EXPAND>
+(The number of parallel CPU execution threads used during inference, affecting speed and system load.)
+</EXPAND>
+ / batching:
+ <EXPAND>
+(Processing multiple tokens or requests together to improve hardware utilization and throughput.)
+</EXPAND>
+</span> CPU threads matter less; you’ll tune <b>batch size</b>
+<EXPAND>
+(The number of tokens or sequences processed simultaneously during inference, impacting speed and memory use.)
+</EXPAND>
+ / <b>flash attention options</b>
+<EXPAND>
+(Optimized attention algorithms that reduce memory bandwidth and latency, especially beneficial for long contexts.)
+</EXPAND>
+ (if enabled) for throughput.<br>
+<br>
+	
+
+<br>
+That’s basically it: <b>same architecture, different build + bigger model + more context + GPU offload tuning</b>.<br>
+<br>
+
+
+</div>
+
+
+
+  <!-- (b1) end ************************************************************** -->
+      </font>
+    </td>
+
+  </tr>
+</table>
+</font>
+</BODY>
+</HTML>
