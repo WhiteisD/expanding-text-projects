@@ -1,0 +1,87 @@
+/* If I recall, this is how to place comments in style sheets. */
+/* File: main.css */
+/* System: ConText Expanding Text System */
+/* Auth: David Whiteis */
+/*  */
+
+
+/* I can't include BODY or TD, since Dino defines them in his code. */
+/*
+BODY,TD
+{
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	
+}
+*/
+
+
+.error-message{
+	color: Red;
+}
+
+.text-small{
+	font-size: 10px;
+}
+
+.text-justified{
+	text-align: justify;
+}
+
+.text-header{
+	font-size: 22px;
+	font-weight: bold;
+	font: sans-serif;
+	color: White;
+}
+
+.text-title{
+	font-size: 20px;
+	font-weight: bold;
+	color: White;
+}
+
+.header{
+	background-color: #008B8B;
+}
+
+.footer{
+	background-color: #008B8B;
+}
+
+.content{
+	background-color: White;
+}
+
+.menu{
+	background-color: #D3D3D3;
+}
+
+.form-input{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.form-label{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.menu-link{
+	text-decoration: none;
+	font-weight:bold;
+}
+.menu-link:hover{
+	text-decoration: none;
+	font-weight:bold;
+	color: Red;
+}
+
+.page-section{
+	background-color: #D3D3D3;
+	font-weight: bold;
+	font-size: 13px;
+}
+
