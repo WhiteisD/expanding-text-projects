@@ -11,5 +11,8 @@
 
 ### This is a free github account, and Pages is turned on here, so any files I place here will be announced on github's announcement stream, and so could end up in archive.org or any other number of places.
 
-Here is one of the files live:
+Here's a page on some AI term, live:
 [ET-AI/ET-AI_cte.HTM](https://whiteisd.github.io/expanding-text-projects/ET-AI/ET-AI_cte.HTM)
+
+And here is Expanding Terrapin:
+[ET-AI/ET-AI_cte.HTM](https://whiteisd.github.io/expanding-text-projects/ExpandingTerrapin/ExpandingTerrapin_cte.htm)
