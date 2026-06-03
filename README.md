@@ -14,5 +14,8 @@
 Here's a page on some AI term, live:
 [ET-AI/ET-AI_cte.HTM](https://whiteisd.github.io/expanding-text-projects/ET-AI/ET-AI_cte.HTM)
 
+Here's a newer version of the above:
+[ET-AI/ET-AI_cte.HTM](https://whiteisd.github.io/expanding-text-projects/ET-AI3/ET-AI3_cte.HTM)
+
 And here is Expanding Terrapin:
 [ET-AI/ET-AI_cte.HTM](https://whiteisd.github.io/expanding-text-projects/ExpandingTerrapin/ExpandingTerrapin_cte.htm)
