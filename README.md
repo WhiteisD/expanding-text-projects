@@ -4,7 +4,7 @@
 
 ## I used ET for the SE architecture plan, should I place a copy of that here?
 
-## This repo should be set up with Pages, so I can test them as web pages.
+## This repo is set up as Public using github Pages, so I can test them as web pages.
 ## They are not neccessarily from git repos on my local machine.
 
 # No private files should be placed here, since:
