@@ -11,10 +11,10 @@
 
 ### This is a free github account, and Pages is turned on here, so any files I place here will be announced on github's announcement stream, and so could end up in archive.org or any other number of places.
 
-Here's a page on some AI term, live:
+Here's a page on some AI terms, live:
 [ET-AI/ET-AI_cte.HTM](https://whiteisd.github.io/expanding-text-projects/ET-AI/ET-AI_cte.HTM)
 
-Here's a newer version of the above:
+Here's my "slide deck" for my AI talk, in ET:
 [ET-AI3/ET-AI3_cte.HTM](https://whiteisd.github.io/expanding-text-projects/ET-AI3/ET-AI3_cte.HTM)
 
 And here is Expanding Terrapin:
